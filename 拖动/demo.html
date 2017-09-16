@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>拖动</title>
+	<script src="../public/js/jquery-3.2.1.js"></script>
+	<script src="./Dragfree.js"></script>
+	<style>
+		/*body,html{
+			padding:0;
+			margin:0;
+		}*/
+		.drag-box{
+			width: 100px;
+			height: 100px;
+			/*background: blue;*/
+			position: relative;
+			border: 1px solid #000;
+			margin:50px 50px;
+		}
+		.drag{
+			background: blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="drag-box">
+		<div class="drag">点此拖动</div>
+	</div>
+	<div class="drag-box2">
+		<div class="drag2">点此拖动</div>
+	</div>
+	<script>
+		var drag = new Dragfree(".drag",{
+			handleRange:'',
+			moveDom:'.drag-box'
+		});
+		var drag2 = new Dragfree(".drag-box2",{
+			handleRange:'',
+			moveDom:'.drag-box2'
+		});
+	</script>
+</body>
+</html>
